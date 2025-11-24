@@ -32,7 +32,7 @@ type ColorString = {
     };
 };
 
-type ColorNames = { [name: string]: string };
+type ColorNames = { [name: string]: Color };
 
 type ColorErrorNames = 'UnknownColor' | 'InvalidColor' | '';
 
@@ -53,6 +53,7 @@ declare const checkHexValue = (value: string) => {
 }
 
 declare const unknownColor: ColorErrorNames = 'UnknownColor';
+
 declare const invalidColor: ColorErrorNames = 'InvalidColor';
 
 declare class ColorError extends Error {
