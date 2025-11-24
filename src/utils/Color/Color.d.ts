@@ -32,8 +32,6 @@ type ColorString = {
     };
 };
 
-type ColorNames = { [name: string]: Color };
-
 type ColorErrorNames = 'UnknownColor' | 'InvalidColor' | '';
 
 type TColorError = [name: ColorErrorNames, method: string, message: string];
@@ -66,5 +64,3 @@ declare class ColorError extends Error {
         this.name = name;
     }
 }
-
-declare const Colors: ColorNames;
